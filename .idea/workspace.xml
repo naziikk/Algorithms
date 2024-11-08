@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="AlgoAndDS_hw1" targetName="AlgoAndDS_hw1" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0dd72c2a-463d-4af4-ab8b-21551aee5e46" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2023" />
+    <option name="minorVersion" value="3.2" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2mF2BzPnF9pRH4BAnx8wpu8RjxD" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "C/C++ File.task1.cpp.executor": "Run",
+    "CMake Application.AlgoAndDS_hw1.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/nazarzakrevskij/CLionProjects/AlgoAndDS_hw1",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Тренировки по алгоритмам/Тренировки 5" />
+      <recent name="$PROJECT_DIR$/Тренировки по алгоритмам/Множества и словари" />
+      <recent name="$PROJECT_DIR$/contest1" />
+      <recent name="$PROJECT_DIR$/contest2" />
+    </key>
+  </component>
+  <component name="RunManager" selected="CMake Application.AlgoAndDS_hw1">
+    <configuration name="AlgoAndDS_hw1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AlgoAndDS_hw1" TARGET_NAME="AlgoAndDS_hw1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AlgoAndDS_hw1" RUN_TARGET_NAME="AlgoAndDS_hw1">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="task1.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AlgoAndDS_hw1" TARGET_NAME="task1.cpp" CONFIG_NAME="task1.cpp">
+      <option name="sourceFile" value="contest2/task1.cpp" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="C/C++ File.task1.cpp" />
+      <item itemvalue="CMake Application.AlgoAndDS_hw1" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="C/C++ File.task1.cpp" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0dd72c2a-463d-4af4-ab8b-21551aee5e46" name="Changes" comment="" />
+      <created>1726657871375</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1726657871375</updated>
+      <workItem from="1726657872937" duration="41292000" />
+      <workItem from="1726764154480" duration="156000" />
+      <workItem from="1726841713097" duration="421000" />
+      <workItem from="1727120981325" duration="300000" />
+      <workItem from="1727160567700" duration="6311000" />
+      <workItem from="1727214077614" duration="986000" />
+      <workItem from="1727274538667" duration="1199000" />
+      <workItem from="1727342215239" duration="2171000" />
+      <workItem from="1727362675406" duration="6750000" />
+      <workItem from="1727601904217" duration="5387000" />
+      <workItem from="1727631722526" duration="9279000" />
+      <workItem from="1727695887095" duration="9525000" />
+      <workItem from="1727705440983" duration="14271000" />
+      <workItem from="1727734688634" duration="20553000" />
+      <workItem from="1727812233463" duration="7522000" />
+      <workItem from="1727872388330" duration="9000" />
+      <workItem from="1727937782838" duration="3974000" />
+      <workItem from="1728026686744" duration="20054000" />
+      <workItem from="1728306034049" duration="72120000" />
+      <workItem from="1729092095445" duration="13947000" />
+      <workItem from="1729197515155" duration="285000" />
+      <workItem from="1729586451597" duration="732000" />
+      <workItem from="1729790916996" duration="16864000" />
+      <workItem from="1729863688652" duration="2272000" />
+      <workItem from="1729865975648" duration="7823000" />
+      <workItem from="1730279508834" duration="462000" />
+      <workItem from="1730280005743" duration="11257000" />
+      <workItem from="1730291761894" duration="103650000" />
+      <workItem from="1730645124102" duration="4033000" />
+      <workItem from="1730660036177" duration="41037000" />
+      <workItem from="1730903620544" duration="15418000" />
+      <workItem from="1730975015915" duration="7613000" />
+      <workItem from="1730987428614" duration="35823000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticReloadCMake value="true" />
+  </component>
+</project>
