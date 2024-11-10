@@ -1,42 +1,37 @@
 #include <iostream>
-#include <vector>
-#include <algorithm>
-#include <iomanip>
-#include <sstream>
-
-long long TimeToSeconds(const std::string& time) {
-    int hours = std::stoi(time.substr(0, 2));
-    int minutes = std::stoi(time.substr(3, 2));
-    int seconds = std::stoi(time.substr(6, 2));
-    return hours * 3600 + minutes * 60 + seconds;
-}
-
-std::string SecondsToTime(long long seconds) {
-    int hours = seconds / 3600;
-    int minutes = (seconds % 3600) / 60;
-    int sec = seconds % 60;
-
-    std::ostringstream oss;
-    oss << std::setw(2) << std::setfill('0') << hours << ":"
-        << std::setw(2) << std::setfill('0') << minutes << ":"
-        << std::setw(2) << std::setfill('0') << sec;
-
-    return oss.str();
-}
+#include <list>
 
 int main() {
-    std::string a, b, c;
-    std::cin >> a >> b >> c;
-    long long day_seconds = 24 * 60 * 60;
-    long long seconds_a = TimeToSeconds(a);
-    long long seconds_b = TimeToSeconds(b);
-    long long seconds_c = TimeToSeconds(c);
-    if (seconds_c < seconds_a) {
-        seconds_c += day_seconds;
+    std::ios::sync_with_stdio(false);
+    std::cin.tie(nullptr);
+    std::cout.tie(nullptr);
+    int n;
+    std::cin >> n;
+    std::list<int> queue;
+    for (int i = 0; i < n; ++i) {
+        char action;
+        std::cin >> action;
+        if (action == '+') {
+            int idx;
+            std::cin >> idx;
+            queue.push_back(idx);
+        }
+        else if (action == '*') {
+            int idx;
+            std::cin >> idx;
+            int mid = queue.size() / 2;
+            if (queue.size() % 2 != 0) {
+                ++mid;
+            }
+            auto it = queue.begin();
+            std::advance(it, mid);
+            queue.insert(it, idx);
+        }
+        else if (action == '-') {
+            std::cout << queue.front() << '\n';
+            queue.pop_front();
+        }
     }
-    long long difference = (seconds_c - seconds_a + 1) / 2;
-    seconds_b += difference;
-    seconds_b %= day_seconds;
-    std::cout << SecondsToTime(seconds_b);
+
     return 0;
 }
