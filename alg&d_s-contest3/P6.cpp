@@ -25,14 +25,14 @@ std::vector<int> nQueens(int n) {
     for (int i = 0; i < n; i++) {
         standing[i] = i;
     }
-    std::mt19937 gen(87);
-    std::uniform_int_distribution<> distrib(0, 300);
+    std::mt19937 gen(0);
+    std::uniform_int_distribution<> distrib(0, 267);
     std::uniform_real_distribution<> dabli(0, 1);
     std::shuffle(standing.begin(), standing.end(), gen);
     int energy = correctQueens(standing, n);
-    double temp = 820;
+    double temp = 1000;
     while (true) {
-        temp *= 0.99;
+        temp *= 0.97;
         auto current_standing = standing;
         std::swap(current_standing[distrib(gen) % n], current_standing[(distrib(gen) % n + 1) % n]);
         int new_energy = correctQueens(current_standing, n);
