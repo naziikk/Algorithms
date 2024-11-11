@@ -1,50 +1,73 @@
 #include <iostream>
-#include <set>
 #include <vector>
-#include <stack>
 #include <algorithm>
+#include <queue>
+
+class Deadlocks {
+    int current_deadlock = 0;
+    int max_deadlocks = 0;
+    std::priority_queue<int, std::vector<int>, std::greater<>> free_deadlocks;
+    std::unordered_map<int, bool> busy_deadlocks;
+    std::unordered_map<int, int> number_to_deadlock;
+
+public:
+    Deadlocks() = default;
+
+    explicit Deadlocks(int k) : max_deadlocks(k) {}
+
+    int comeToDeadlock(int idx) {
+        if (!free_deadlocks.empty()) {
+            int deadlock = free_deadlocks.top();
+            free_deadlocks.pop();
+            number_to_deadlock[idx] = deadlock;
+            busy_deadlocks[deadlock] = true;
+            return deadlock;
+        }
+        if (current_deadlock >= max_deadlocks) {
+            return -1;
+        }
+        number_to_deadlock[idx] = current_deadlock;
+        busy_deadlocks[current_deadlock] = true;
+        current_deadlock++;
+        return current_deadlock - 1;
+    }
+
+    void leaveDeadlock(int idx) {
+        int deadlock = number_to_deadlock[idx];
+        busy_deadlocks[deadlock] = false;
+        free_deadlocks.push(deadlock);
+    }
+};
 
 int main() {
-    int n;
-    std::cin >> n;
-    std::vector<int> arr(n);
+    int k, n;
+    std::cin >> k >> n;
+    Deadlocks deadlock(k);
+    std::vector<std::pair<int, int>> come(n);
+    std::vector<std::pair<int, int>> leaveDeadlock(n);
     for (int i = 0; i < n; i++) {
-        int num;
-        std::cin >> num;
-        arr[i] = num;
+        std::cin >> come[i].first;
+        come[i].second = i;
+        std::cin >> leaveDeadlock[i].first;
+        leaveDeadlock[i].second = i;
     }
-    std::stack<int> st;
-    int need = 1;
-    int cur = 0;
-    std::vector<std::pair<int, int>> res;
-    std::vector<int> mas;
+    std::sort(leaveDeadlock.begin(), leaveDeadlock.end());
+    int j = 0;
+    std::vector<int> answer(n);
     for (int i = 0; i < n; i++) {
-        if (arr[i] != need) {
-            cur++;
-            st.push(arr[i]);
+        while (j < leaveDeadlock.size() && leaveDeadlock[j].first < come[i].first) {
+            deadlock.leaveDeadlock(leaveDeadlock[j].second);
+            j++;
         }
-        else {
-            cur++;
-            st.push(arr[i]);
-            res.emplace_back(1, cur);
-            cur = 0;
-            while (!st.empty() && st.top() == need) {
-                mas.push_back(st.top());
-                st.pop();
-                cur++;
-                need++;
-            }
-            res.emplace_back(2, cur);
-            cur = 0;
+        int deadlock_number = deadlock.comeToDeadlock(come[i].second);
+        if (deadlock_number == -1) {
+            std::cout << 0 <<  ' ' << i + 1;
+            return 0;
         }
+        answer[i] = deadlock_number + 1;
     }
-    std::sort(arr.begin(), arr.end());
-    if (mas != arr) {
-        std::cout << 0;
-        return 0;
-    }
-    for (auto [f, s] : res) {
-        std::cout << f << ' ' << s << '\n';
+    for (auto el : answer) {
+        std::cout << el << '\n';
     }
     return 0;
 }
