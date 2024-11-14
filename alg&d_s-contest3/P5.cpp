@@ -3,14 +3,12 @@
 #include <bitset>
 
 std::vector<int> convertToBinary(std::string& s, int n) {
-    long long blockSize = std::ceil(n / 4.0);
     std::vector<int> result;
-    long long bitCount = 0;
-    for (int i = 0; i < s.size() && bitCount < n; i += blockSize) {
-        std::string block = s.substr(i, blockSize);
-        long long hexValue = std::stoul(block, nullptr, 16);
-        std::bitset<64> binary(hexValue);
-        for (int j = blockSize * 4 - 1; j >= 0 && bitCount < n; j--) {
+    int bitCount = 0;
+    for (char c : s) {
+        int hexValue = std::stoi(std::string(1, c), nullptr, 16);
+        std::bitset<4> binary(hexValue);
+        for (int j = 3; j >= 0 && bitCount < n; --j) {
             result.push_back(binary[j]);
             bitCount++;
         }
@@ -48,6 +46,8 @@ bool isEqualFreivalds(std::vector<std::vector<int>>& A, std::vector<std::vector<
 }
 
 int main() {
+    std::ios_base::sync_with_stdio(false);
+    std::cin.tie(0);
     int n;
     std::cin >> n;
     std::random_device rd;
@@ -69,7 +69,7 @@ int main() {
         std::cin >> current_row;
         C[i] = convertToBinary(current_row, n);
     }
-    int m = 100;
+    int m = 10;
     while (m--) {
         std::vector<int> arr(n);
         for (int i = 0; i < n; i++) {
