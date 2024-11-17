@@ -1,71 +1,32 @@
 #include <iostream>
 #include <vector>
-#include <climits>
-#include <map>
-#include <queue>
-#include <set>
 
-struct Point {
-    int x, y;
-    bool operator<(const Point& other) const {
-        return (x == other.x) ? (y < other.y) : (x < other.x);
-    }
-    bool operator==(const Point& other) const {
-        return x == other.x && y == other.y;
-    }
-};
+std::vector<std::pair<int, int>> distances = {{2, -1}, {2, 1}, {1, 2}, {-1, 2}};
+std::vector<std::vector<long long>> dp;
 
-void bfs(const Point& coordinates, std::map<Point, int>& distances) {
-    std::vector<Point> directions = {{-1, -2}, {-2, -1}, {-2, 1}, {-1, 2}, {1, 2}, {2, 1}, {2, -1}, {1, -2}};
-    std::queue<std::pair<Point, int>> queue;
-    queue.emplace(coordinates, 0);
-    distances[coordinates] = 0;
-    std::set<Point> visited;
-    while (!queue.empty()) {
-        auto [current_point, dist] = queue.front();
-        queue.pop();
-        if (visited.count(current_point)) {
-            continue;
-        }
-        visited.insert(current_point);
-        for (const Point& direction : directions) {
-            Point next = {current_point.x + direction.x, current_point.y + direction.y};
-            if (next.x >= 0 && next.x < 8 && next.y >= 0 && next.y < 8) {
-               if (!distances.count(next) || distances[next] > dist + 1) {
-                    distances[next] = dist + 1;
-                    queue.emplace(next, dist + 1);
-                }
-            }
+long long memoization(int n, int m, int i, int j) {
+    if (i == n - 1 && j == m - 1) {
+        return 1;
+    }
+    if (dp[i][j] != -1) {
+        return dp[i][j];
+    }
+    long long count = 0;
+    for (const auto& move : distances) {
+        int new_i = i + move.first;
+        int new_j = j + move.second;
+        if (new_i >= 0 && new_i < n && new_j >= 0 && new_j < m) {
+            count += memoization(n, m, new_i, new_j);
         }
     }
+    dp[i][j] = count;
+    return count;
 }
-
 int main() {
-    std::string first, second;
-    std::cin >> first >> second;
-    Point first_coordinates = {first[0] - 'a', first[1] - '1'};
-    Point second_coordinates = {second[0] - 'a', second[1] - '1'};
-    if (first_coordinates == second_coordinates) {
-        std::cout << 0;
-        return 0;
-    }
-    std::map<Point, int> first_distances;
-    std::map<Point, int> second_distances;
-    bfs(first_coordinates, first_distances);
-    bfs(second_coordinates, second_distances);
-    int ans = INT_MAX;
-    for (int i = 0; i <= 8; i++) {
-        for (int j = 0; j < 8; j++) {
-            Point current = {i, j};
-            if (first_distances[current] != 0 && first_distances[current] == second_distances[current]) {
-               ans = std::min(ans, first_distances[current]);
-            }
-        }
-    }
-    if (ans == INT_MAX) {
-        std::cout << -1;
-        return 0;
-    }
-    std::cout << ans;
+    int n, m;
+    std::cin >> n >> m;
+    dp.assign(n, std::vector<long long>(m, -1));
+    long long result = memoization(n, m, 0, 0);
+    std::cout << result;
     return 0;
 }
