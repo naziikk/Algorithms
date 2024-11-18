@@ -40,11 +40,9 @@ int main() {
     }
     std::sort(arr.begin(), arr.end());
     if (mas != arr) {
-        std::cout << 0;
+        std::cout << "NO";
         return 0;
     }
-    for (auto [f, s] : res) {
-        std::cout << f << ' ' << s << '\n';
-    }
+    std::cout << "YES";
     return 0;
 }
