@@ -1,65 +1,68 @@
 #include <iostream>
+#include <random>
 #include <vector>
-#include <queue>
 #include <algorithm>
 
-const int mod = 1e9 + 7;
+class ArrayGenerator {
+    std::random_device rd;
+    std::mt19937 gen;
+    std::uniform_int_distribution<> distrib_size;
+    std::uniform_int_distribution<> distrib_element;
 
-std::pair<int, int> dfs(int n, std::vector<std::vector<int>>& tree, int start) {
-    std::queue<int> vertexes;
-    std::vector<int> dist(n + 1, -1);
-    vertexes.push(start);
-    dist[start] = 0;
-    int farthest = start;
-    int maxi = 0;
-    while (!vertexes.empty()) {
-        auto vertex = vertexes.front();
-        vertexes.pop();
-        for (auto adj : tree[vertex]) {
-            if (dist[adj] == -1) {
-                dist[adj] = dist[vertex] + 1;
-                vertexes.push(adj);
-                if (dist[adj] > maxi) {
-                    maxi = dist[adj];
-                    farthest = adj;
-                }
-            }
+public:
+    ArrayGenerator(int from_size, int to_size, int from_element, int to_element)
+        : gen(rd()), distrib_size(from_size / 100, to_size / 100), distrib_element(from_element, to_element) {}
+
+    std::vector<int> generateRandomArray() {
+        size_t size = distrib_size(gen) * 100;
+        std::vector<int> nums(size);
+        for (size_t i = 0; i < size; i++) {
+            nums[i] = distrib_element(gen);
         }
+        return nums;
     }
-    return {farthest, maxi};
-}
 
-int findDiametr(std::vector<std::vector<int>>& tree, int n, int vertex) {
-    auto [u, _] = dfs(n, tree, vertex);
-    auto [_1, diametr] = dfs(n, tree, u);
-    return diametr;
-}
+    std::vector<int> generateReversedArray() {
+        std::vector<int> nums = generateRandomArray();
+        std::sort(nums.begin(), nums.end());
+        std::reverse(nums.begin(), nums.end());
+        return nums;
+    }
 
-void addEdge(std::vector<std::vector<int>>& tree, int from, int to) {
-    tree[from].push_back(to);
-}
+    std::vector<int> generateAlmostSortedArray() {
+        std::vector<int> nums = generateReversedArray();
+        size_t cnt_pairs_to_swap = distrib_element(gen) % 6;
+        for (size_t i = 0; i < cnt_pairs_to_swap; i++) {
+            size_t first_idx = distrib_element(gen) % nums.size();
+            size_t second_idx = (distrib_element(gen) + 1) % nums.size();
+            std::swap(nums[first_idx], nums[second_idx]);
+        }
+        return nums;
+    }
+};
 
 int main() {
-    int n;
-    std::cin >> n;
-    std::vector<std::vector<int>> tree(n + 1);
-    for (int i = 1; i < n; i++) {
-        int from, to;
-        std::cin >> from >> to;
-        addEdge(tree, from, to);
-        addEdge(tree, to, from);
+    ArrayGenerator gen(500, 10000, 0, 6000);
+    std::vector<int> random_arr = gen.generateRandomArray();
+    std::cout << "Случайный массив: размер - " << random_arr.size() << '\n';
+    for (const auto& element : random_arr) {
+        std::cout << element << ' ';
     }
-    long long ans = 0;
-    for (int i = 1; i <= n; i++) {
-        for (const auto& node : tree[i]) {
-            std::vector<std::vector<int>> cloned_tree = tree;
-            cloned_tree[i].erase(std::find(cloned_tree[i].begin(), cloned_tree[i].end(), node));
-            cloned_tree[node].erase(std::find(cloned_tree[node].begin(), cloned_tree[node].end(), i));
-            long long first_diametr = findDiametr(cloned_tree, n, i);
-            long long second_diametr = findDiametr(cloned_tree, n, node);
-            ans = std::max(ans, first_diametr * second_diametr);
-        }
+    std::cout << '\n';
+
+    std::vector<int> random_sorted_arr = gen.generateReversedArray();
+    std::cout << "Случайный развернутый массив: размер - " << random_sorted_arr.size() << '\n';
+    for (const auto& element : random_sorted_arr) {
+        std::cout << element << ' ';
     }
-    std::cout << ans;
+    std::cout << '\n';
+
+    std::vector<int> random_almost_sorted_arr = gen.generateAlmostSortedArray();
+    std::cout << "Случайный почти отсортированный массив: размер - " << random_almost_sorted_arr.size() << '\n';
+    for (const auto& element : random_almost_sorted_arr) {
+        std::cout << element << ' ';
+    }
+    std::cout << '\n';
+
     return 0;
 }
