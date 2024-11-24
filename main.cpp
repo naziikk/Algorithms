@@ -1,150 +1,113 @@
 #include <iostream>
 #include <vector>
 #include <cmath>
+#include </Users/nazarzakrevskij/CLionProjects/AlgoAndDS_hw1/alg&d_s-contest3/A2i/ArrayGenerator.cpp>
+const int M = 1000;
 
-bool hasCycle(const std::vector<std::vector<int>>& tree, int vertex, int prev, std::vector<int>& vis) {
-    if (vis[vertex]) {
-        return true;
-    }
-    vis[vertex] = 1;
-    for (const auto& neighbour : tree[vertex]) {
-        if (neighbour != prev) {
-            if (hasCycle(tree, neighbour, vertex, vis)) {
-                return true;
-            }
+class HeapSort {
+public:
+    void heapify(std::vector<int>& arr, int i, int n) {
+        int largest = i;
+        int l = 2 * i + 1;
+        int r = 2 * i + 2;
+        if (l < n && arr[l] > arr[largest]) {
+            largest = l;
+        }
+        if (r < n && arr[r] > arr[largest]) {
+            largest = r;
+        }
+        if (largest != i) {
+            std::swap(arr[i], arr[largest]);
+            heapify(arr, largest, n);
         }
     }
-    return false;
-}
 
-std::vector<long long> precomputeFactorials(int n, int k) {
-    long long current_prod = 1;
-    std::vector<long long> factorials(n + 1);
-    factorials[0] = 1;
-    for (long long i = 1; i <= n; i++) {
-        current_prod = (current_prod % k) * (i % k) % k;
-        factorials[i] = current_prod;
-    }
-    return factorials;
-}
-
-void dfs(int vertex, int current_component, const std::vector<std::vector<int>>& tree, std::vector<int>& components, std::vector<int>& new_component) {
-    components[vertex] = current_component;
-    new_component.push_back(vertex);
-    for (const auto& neigbour : tree[vertex]) {
-        if (!components[neigbour]) {
-            dfs(neigbour, current_component, tree, components, new_component);
+    void buildMaxHeap(std::vector<int>& arr, int n) {
+        for (int i = n / 2 - 1; i >= 0; i--) {
+            heapify(arr, i, n);
         }
     }
-}
 
-bool checkEdgeCase(std::vector<std::vector<int>>& tree, int n, std::vector<int>& cnt_friendly_friends) {
-    for (int i = 1; i <= n; i++) {
-        size_t cnt = 0;
-        for (const auto& neighbour : tree[i]) {
-            if (tree[neighbour].size() >= 2) {
-                cnt++;
+    void heapSort(std::vector<int>& arr, int n) {
+        buildMaxHeap(arr, n);
+        for (int i = n - 1; i >= 0; i--) {
+            std::swap(arr[i], arr[0]);
+            heapify(arr, 0, i);
+        }
+    }
+};
+
+class InsertionSort {
+public:
+    void insertionSort(int l, int r, std::vector<int>& arr) {
+        for (int i = l + 1; i <= r; i++) {
+            int x = arr[i];
+            int j = i;
+            while (j > l && arr[j - 1] > x) {
+                arr[j] = arr[j - 1];
+                j--;
             }
-            if (cnt >= 3) {
-                return true;
+            arr[j] = x;
+        }
+    }
+};
+
+class QuickSort {
+    InsertionSort insertion;
+    HeapSort heap;
+
+public:
+    int PartitionSort(int i, int j, std::vector<int>& arr) {
+        int pivot = arr[j];
+        int low = i - 1;
+        for (int r = i; r < j; r++) {
+            if (arr[r] < pivot) {
+                low++;
+                std::swap(arr[r], arr[low]);
             }
         }
-        cnt_friendly_friends[i] = cnt;
+        std::swap(arr[low + 1], arr[j]);
+        return low + 1;
     }
-    return false;
-}
 
-void addEdge(std::vector<std::vector<int>>& tree, int from, int to) {
-    tree[from].push_back(to);
-}
+    void quickSort(int l, int r, std::vector<int>& arr, int depth) {
+        int maxDepth = 2 * std::log2(arr.size());
+        if (depth >= maxDepth) {
+            heap.heapSort(arr, r + 1);
+            return;
+        }
+
+        if (r - l <= M) {
+            insertion.insertionSort(l, r, arr);
+            return;
+        }
+        if (r - l <= 1) {
+            return;
+        }
+        int partition_point = PartitionSort(l, r, arr);
+        quickSort(l, partition_point - 1, arr, depth + 1);
+        quickSort(partition_point + 1, r, arr, depth + 1);
+    }
+};
+
 
 int main() {
-    int n, m, k;
-    std::cin >> n >> m >> k;
-    std::vector<std::vector<int>> tree(n + 1);
-    std::vector<bool> has_neighbour(n + 1, false);
-    for (int i = 0; i < m; i++) {
-        int from, to;
-        std::cin >> from >> to;
-        addEdge(tree, from, to);
-        addEdge(tree, to, from);
-        has_neighbour[from] = true;
-        has_neighbour[to] = true;
-    }
-    int lonely = 0;
-    for (int i = 1; i <= n; i++) {
-        if (!has_neighbour[i]) {
-            lonely++;
+    QuickSort qsort;
+   ArrayGenerator gen(10000, 10000, 0, 6000);
+        // также можно вызвать любую другую функцию генерации массива
+    std::vector<int> arr = gen.generateRandomArray();
+    for (int i = 500; i <= 10000; i += 100) {
+        int cur = 50;
+        long long sum = 0;
+        while (cur--) {
+            auto start = std::chrono::high_resolution_clock::now();
+            std::vector<int> array = {arr.begin(), arr.begin() + i};
+            qsort.quickSort(0, array.size() - 1, array, 0); // вызов функции для обработки массива
+            auto elapsed = std::chrono::high_resolution_clock::now() - start;
+            long long msec = std::chrono::duration_cast<std::chrono::microseconds>(elapsed).count();
+            sum += msec;
         }
+        std::cout << sum / 50 << '\n';
     }
-    std::vector<int> vis(n + 1, 0);
-    for (int i = 1; i <= n; i++) {
-        if (!vis[i] && has_neighbour[i]) {
-            if (hasCycle(tree, i, -1, vis)) {
-                std::cout << 0;
-                return 0;
-            }
-        }
-    }
-    std::vector<int> cnt_friendly_friends(n + 1);
-    if (checkEdgeCase(tree, n, cnt_friendly_friends)) {
-        std::cout << 0;
-        return 0;
-    }
-    std::vector<long long> factorials = precomputeFactorials(n, k);
-    std::vector<std::vector<int>> components;
-    int current_component = 0;
-    vis = {};
-    vis.resize(n + 1, 0);
-    for (int i = 1; i <= n; i++) {
-        if (vis[i] == 0 && has_neighbour[i]) {
-            current_component++;
-            std::vector<int> new_component;
-            dfs(i, current_component, tree, vis, new_component);
-            components.push_back(new_component);
-        }
-    }
-    long long ans = 1;
-    std::vector<int> visited(n + 1);
-    for (const auto& component : components) {
-        ans = (ans * 2) % k;
-        int cnt = 0;
-        for (const auto& vertex : component) {
-            if (tree[vertex].size() == 1) {
-                continue;
-            }
-            int visited_lonely = 0;
-            int visited_friendly = 0;
-            for (const auto& neighbour : tree[vertex]) {
-                if (visited[neighbour]) {
-                    if (tree[neighbour].size() == 1) {
-                        visited_lonely++;
-                    } else if (tree[neighbour].size() >= 2) {
-                        visited_friendly++;
-                    }
-                }
-            }
-            cnt++;
-            int remaining_nodes = tree[vertex].size() - visited_friendly - visited_lonely;
-            int friendly_diff = cnt_friendly_friends[vertex] - visited_friendly;
-            ans = (ans * factorials[remaining_nodes - friendly_diff]) % k;
-            for (const auto& neighbour : tree[vertex]) {
-                visited[neighbour] = 1;
-            }
-            visited[vertex] = 1;
-        }
-        if (cnt >= 2) {
-            ans = (ans * 2) % k;
-        }
-    }
-    long long cur = 1;
-    if (lonely != 0) {
-        for (int i = n - lonely + 2; i <= n + 1; i++) {
-            cur = (cur * (i % k)) % k;
-        }
-    }
-    ans = (ans * factorials[current_component]) % k;
-    ans = (ans * cur) % k;
-    std::cout << ans  << ' ';
     return 0;
 }
