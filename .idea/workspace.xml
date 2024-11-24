@@ -21,14 +21,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0dd72c2a-463d-4af4-ab8b-21551aee5e46" name="Changes" comment="new tasks done">
-      <change afterPath="$PROJECT_DIR$/Тренировки по алгоритмам/Тренировки 3/НОП с восстановлением ответа.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Тренировки по алгоритмам/Тренировки 3/Ход конем.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alg&amp;d_s-contest3/A2i.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/alg&amp;d_s-contest3/A2i.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/AlgoAndDS_hw1" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/AlgoAndDS_hw1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AlgoAndDS_hw1.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AlgoAndDS_hw1.dir/main.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -161,6 +161,12 @@
       <workItem from="1731846143590" duration="534000" />
       <workItem from="1731846685714" duration="13603000" />
       <workItem from="1731932460954" duration="2224000" />
+      <workItem from="1731935667229" duration="99394000" />
+      <workItem from="1732343159140" duration="13048000" />
+      <workItem from="1732362455289" duration="7473000" />
+      <workItem from="1732373532693" duration="13680000" />
+      <workItem from="1732398038700" duration="1599000" />
+      <workItem from="1732399644047" duration="6875000" />
     </task>
     <task id="LOCAL-00001" summary="Initial">
       <option name="closed" value="true" />
@@ -362,7 +368,55 @@
       <option name="project" value="LOCAL" />
       <updated>1731921755172</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="new tasks done">
+      <option name="closed" value="true" />
+      <created>1731959626022</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1731959626022</updated>
+    </task>
+    <task id="LOCAL-00027" summary="new tasks done">
+      <option name="closed" value="true" />
+      <created>1732016207422</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1732016207422</updated>
+    </task>
+    <task id="LOCAL-00028" summary="new tasks done">
+      <option name="closed" value="true" />
+      <created>1732054288482</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1732054288482</updated>
+    </task>
+    <task id="LOCAL-00029" summary="new tasks done">
+      <option name="closed" value="true" />
+      <created>1732108882714</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1732108882714</updated>
+    </task>
+    <task id="LOCAL-00030" summary="new tasks done">
+      <option name="closed" value="true" />
+      <created>1732208381772</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1732208381772</updated>
+    </task>
+    <task id="LOCAL-00031" summary="new tasks done">
+      <option name="closed" value="true" />
+      <created>1732307818748</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1732307818748</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
