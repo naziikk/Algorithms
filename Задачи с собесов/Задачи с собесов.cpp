@@ -25,9 +25,3 @@ std::string Convert(std::string& s) {
     }
     return s;
 }
-
-int main() {
-    std::string s = "a b c d e f";
-    std::cout << Convert(s) << '\n';
-    return 0;
-}
