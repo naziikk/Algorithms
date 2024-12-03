@@ -78,3 +78,26 @@ int main() {
     }
     return 0;
 }
+
+void printTree(TreeNode* root, int depth = 0) {
+    if (!root) {
+        return;
+    }
+
+    for (int i = 0; i < depth; ++i) {
+        std::cout << "  ";
+    }
+    std::cout << "Key: " << root->val_
+              << ", Color: " << (root->color == 'R' ? "Red" : "Black") << "\n";
+    for (int i = 0; i < depth; ++i) {
+        std::cout << "  ";
+    }
+    std::cout << "Left:\n";
+    printTree(root->left, depth + 1);
+
+    for (int i = 0; i < depth; ++i) {
+        std::cout << "  ";
+    }
+    std::cout << "Right:\n";
+    printTree(root->right, depth + 1);
+}

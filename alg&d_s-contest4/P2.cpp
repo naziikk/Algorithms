@@ -50,7 +50,7 @@ bool checkRootToLeafPaths(TreeNode* root, int current, int& fix_cnt) {
     if (root->color == 'B') {
         current++;
     }
-    return checkRootToLeafPaths(root->left, current, fix_cnt) && 
+    return checkRootToLeafPaths(root->left, current, fix_cnt) &&
     checkRootToLeafPaths(root->right, current, fix_cnt);
 }
 
