@@ -1,102 +1,237 @@
-#include <iostream>
-#include <string>
-#include <unordered_map>
+#include "/Users/nazarzakrevskij/CLionProjects/AlgoAndDS_hw1/alg&d_s-contest4/P3/avl tree.h"
+#include <queue>
+#include <functional>
 #include <climits>
+#include <cmath>
 
-struct TreeNode {
-    int val_;
-    TreeNode* left = nullptr;
-    TreeNode* right = nullptr;
-    char color;
-    TreeNode(int val, char color) : val_(val), color(color), left(nullptr), right(nullptr) {}
-};
+Node::Node(int value) : value(value), left(nullptr), right(nullptr), height(1) {}
 
-struct Data {
-    int key;
-    std::string left_child;
-    std::string right_child;
-    char color;
-};
-
-// проверяю что дерево валидно как BST запуская dfs рекурсивно в оба поддерева
-// понял что можно не делать отдельную функцию и тут же проверять
-// пункт 4) Если вершина – красная, то ее родитель – черный.
-bool validateRBT(long l, long r, TreeNode* root) {
-    if (!root) {
-        return true;
-    }
-    // проверка валидности bst
-    if (root->val_ <= l || root->val_ >= r) {
-        return false;
-    }
-    // проверка пункта 4)
-    if (root->color == 'R' && ((root->left && root->left->color == 'R') ||
-    (root->right && root->right->color == 'R'))) {
-        return false;
-    }
-    return validateRBT(l, root->val_, root->left) && validateRBT(root->val_, r, root->right);
+Node::~Node() {
+    delete left;
+    delete right;
 }
 
-// проверяю пути на количество черных вершин
-bool checkRootToLeafPaths(TreeNode* root, int current, int& fix_cnt) {
-    if (!root) {
-        if (fix_cnt == -1) {
-            fix_cnt = current;
-        } else if (fix_cnt != current) {
-            return false;
-        }
-        return true;
-    }
-    if (root->color == 'B') {
-        current++;
-    }
-    return checkRootToLeafPaths(root->left, current, fix_cnt) && 
-    checkRootToLeafPaths(root->right, current, fix_cnt);
+AVLTree::AVLTree() : root_(nullptr), size_(0) {}
+
+AVLTree::AVLTree(int value) {
+    root_ = new Node(value);
 }
 
-TreeNode* buildTree(const std::unordered_map<int, Data>& tree, int root_number) {
-    if (tree.find(root_number) == tree.end()) {
+int AVLTree::getHeight() {
+    return getNodeHeight(root_);
+}
+
+void AVLTree::insert(int value) {
+    if (!find(value)) {
+        root_ = insertNode(root_, value);
+        size_++;
+    }
+}
+
+void AVLTree::erase(int value) {
+    if (find(value)) {
+        root_ = removeNode(root_, value);
+        size_--;
+    }
+}
+
+int *AVLTree::find(int value) {
+    Node* found = findNode(root_, value);
+    if (!found) {
         return nullptr;
     }
-    const auto& node_data = tree.at(root_number);
-    auto* root = new TreeNode(node_data.key, node_data.color);
-    if (node_data.left_child != "null") {
-        root->left = buildTree(tree, std::stoi(node_data.left_child));
-    }
-    if (node_data.right_child != "null") {
-        root->right = buildTree(tree, std::stoi(node_data.right_child));
-    }
-    return root;
+    return &found->value;
 }
 
-int main() {
-    std::ios_base::sync_with_stdio(false);
-    std::cin.tie(nullptr);
-    std::cout.tie(nullptr);
-    int n, root_number;
-    std::cin >> n;
-    if (n == 0) {
-        std::cout << "NO\n";
+int *AVLTree::traversal() {
+    int* ans = new int[size_];
+    int index = 0;
+    traversalInternal(root_, ans, &index);
+    return ans;
+}
+
+int *AVLTree::lowerBound(int value) {
+    Node* node = lowerBoundInternal(root_, value);
+    if (!node) {
+        return nullptr;
+    }
+    return &node->value;
+}
+
+bool AVLTree::empty() {
+    return size_ == 0;
+}
+
+Node *AVLTree::getRoot() {
+    return root_;
+}
+
+int AVLTree::getSize() {
+    return size_;
+}
+
+AVLTree::~AVLTree() {
+    delete root_;
+}
+
+int AVLTree::getNodeHeight(Node *node) {
+    if (!node) {
         return 0;
     }
-    std::cin >> root_number;
-    std::unordered_map<int, Data> tree;
-    for (int i = 0; i < n; ++i) {
-        int number;
-        Data node_data;
-        std::cin >> number >> node_data.key >> node_data.left_child >> node_data.right_child >> node_data.color;
-        tree[number] = node_data;
-    }
-    TreeNode* root = buildTree(tree, root_number);
-    if (root->color == 'R') {
-        std::cout << "NO\n";
+    return node->height;
+}
+
+int AVLTree::balanceFactor(Node *node) {
+    if (!node) {
         return 0;
     }
-    int fix_cnt = -1;
-    if (!validateRBT(LONG_MIN, LONG_MAX, root) || !checkRootToLeafPaths(root, 0, fix_cnt)) {
-        std::cout << "NO\n";
-        return 0;
+    return getNodeHeight(node->left) - getNodeHeight(node->right);
+}
+
+void AVLTree::balanceHeight(Node* node) {
+    if (node) {
+        node->height = 1 + std::max(getNodeHeight(node->left), getNodeHeight(node->right));
     }
-    std::cout << "YES\n";
-    return 0;
+}
+
+Node* AVLTree::rotateRight(Node* y) {
+    Node* x = y->left;
+    Node* T2 = x->right;
+    x->right = y;
+    y->left = T2;
+    y->height = 1 + std::max(getNodeHeight(y->left), getNodeHeight(y->right));
+    x->height = 1 + std::max(getNodeHeight(x->left), getNodeHeight(x->right));
+    return x;
+}
+
+Node* AVLTree::rotateLeft(Node* x) {
+    Node* y = x->right;
+    Node* T2 = y->left;
+    y->left = x;
+    x->right = T2;
+    x->height = 1 + std::max(getNodeHeight(x->left), getNodeHeight(x->right));
+    y->height = 1 + std::max(getNodeHeight(y->left), getNodeHeight(y->right));
+    return y;
+}
+
+Node* AVLTree::balanceNode(Node* node) {
+    int balance = balanceFactor(node);
+    if (balance > 1) {
+        if (balanceFactor(node->left) >= 0) {
+            return rotateRight(node);
+        }
+        else {
+            node->left = rotateLeft(node->left);
+            return rotateRight(node);
+        }
+    }
+    if (balance < -1) {
+        if (balanceFactor(node->right) <= 0) {
+            return rotateLeft(node);
+        } else {
+            node->right = rotateRight(node->right);
+            return rotateLeft(node);
+        }
+    }
+    return node;
+}
+
+
+Node *AVLTree::insertNode(Node *node, int value) {
+    if (!node) {
+        return new Node(value);
+    }
+    if (value == node->value) {
+        return node;
+    }
+    if (value < node->value) {
+        node->left = insertNode(node->left, value);
+    } else {
+        node->right = insertNode(node->right, value);
+    }
+    node->height = 1 + std::max(getNodeHeight(node->left), getNodeHeight(node->right));
+    return balanceNode(node);
+}
+
+Node *AVLTree::findMinNode(Node *node) {
+    if (!node) {
+        return nullptr;
+    }
+    while (node->left) {
+        node = node->left;
+    }
+    return node;
+}
+
+Node *AVLTree::removeMinNode(Node *node) {
+     if (!node->left) {
+        Node* temp = node;
+        node = node->right;
+        delete temp;
+        return node;
+    }
+    node->left = removeMinNode(node->left);
+    node->height = 1 + std::max(getNodeHeight(node->left), getNodeHeight(node->right));
+    return balanceNode(node);
+}
+
+Node* AVLTree::removeNode(Node* node, int value) {
+    if (!node) {
+        return node;
+    }
+    if (value < node->value) {
+        node->left = removeNode(node->left, value);
+    } else if (value > node->value) {
+        node->right = removeNode(node->right, value);
+    } else {
+        if (!node->left) {
+            Node* temp = node->right;
+            delete node;
+            return temp;
+        } else if (!node->right) {
+            Node* temp = node->left;
+            delete node;
+            return temp;
+        }
+        Node* temp = findMinNode(node->right);
+        node->value = temp->value;
+        node->right = removeNode(node->right, temp->value);
+    }
+    node->height = 1 + std::max(getNodeHeight(node->left), getNodeHeight(node->right));
+    return balanceNode(node);
+}
+
+Node *AVLTree::findNode(Node *node, int value) {
+    if (!node) {
+        return nullptr;
+    }
+    if (value == node->value) {
+        return node;
+    }
+    if (value < node->value) {
+        return findNode(node->left, value);
+    }
+    return findNode(node->right, value);
+}
+
+void AVLTree::traversalInternal(Node *node, int *array, int *index) {
+    if (!node) {
+        return;
+    }
+    traversalInternal(node->left, array, index);
+    array[(*index)++] = node->value;
+    traversalInternal(node->right, array, index);
+}
+
+Node* AVLTree::lowerBoundInternal(Node* current, int value) const {
+    Node* result = nullptr;
+    while (current) {
+        if (current->value >= value) {
+            result = current;
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+    return result;
 }

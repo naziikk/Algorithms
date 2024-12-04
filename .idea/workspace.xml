@@ -21,7 +21,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0dd72c2a-463d-4af4-ab8b-21551aee5e46" name="Changes" comment="new tasks done">
+      <change afterPath="$PROJECT_DIR$/alg&amp;d_s-contest4/P3/avl tree.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alg&amp;d_s-contest4/P3/P3.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/alg&amp;d_s-contest4/P3/P3.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2024-11-03T14-45-23-0475.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/AlgoAndDS_hw1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AlgoAndDS_hw1.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AlgoAndDS_hw1.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
@@ -64,31 +73,38 @@
     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/nazarzakrevskij/CLionProjects/AlgoAndDS_hw1/alg&amp;d_s-contest3/ A3i&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/nazarzakrevskij/CLionProjects/AlgoAndDS_hw1/alg&amp;d_s-contest4/P3&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/alg&amp;d_s-contest4/P3" />
       <recent name="$PROJECT_DIR$/alg&amp;d_s-contest3/ A3i" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/alg&amp;d_s-contest4/P3" />
       <recent name="$PROJECT_DIR$/alg&amp;d_s-contest3/ A3i" />
       <recent name="$PROJECT_DIR$/alg&amp;d_s-contest3/A2i" />
       <recent name="$PROJECT_DIR$/Тренировки по алгоритмам/Тренировки 5" />
       <recent name="$PROJECT_DIR$/Тренировки по алгоритмам/Множества и словари" />
-      <recent name="$PROJECT_DIR$/contest1" />
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.AlgoAndDS_hw1">
     <configuration name="AlgoAndDS_hw1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AlgoAndDS_hw1" TARGET_NAME="AlgoAndDS_hw1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AlgoAndDS_hw1" RUN_TARGET_NAME="AlgoAndDS_hw1">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -100,8 +116,8 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="CMake Application.AlgoAndDS_hw1" />
       <item itemvalue="C/C++ File.task1.cpp" />
+      <item itemvalue="CMake Application.AlgoAndDS_hw1" />
     </list>
     <recent_temporary>
       <list>
@@ -170,6 +186,9 @@
       <workItem from="1732977967927" duration="21000" />
       <workItem from="1733134784979" duration="1291000" />
       <workItem from="1733158483256" duration="3000" />
+      <workItem from="1733158494215" duration="19512000" />
+      <workItem from="1733307100311" duration="1338000" />
+      <workItem from="1733308502237" duration="4317000" />
     </task>
     <task id="LOCAL-00001" summary="Initial">
       <option name="closed" value="true" />
@@ -467,7 +486,23 @@
       <option name="project" value="LOCAL" />
       <updated>1732878217907</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="new tasks done">
+      <option name="closed" value="true" />
+      <created>1733175128248</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1733175128248</updated>
+    </task>
+    <task id="LOCAL-00039" summary="new tasks done">
+      <option name="closed" value="true" />
+      <created>1733224563493</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1733224563493</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
