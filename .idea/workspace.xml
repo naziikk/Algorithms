@@ -21,8 +21,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0dd72c2a-463d-4af4-ab8b-21551aee5e46" name="Changes" comment="new tasks done">
-      <change afterPath="$PROJECT_DIR$/alg&amp;d_s-contest4/P4.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alg&amp;d_s-contest4/rbtree.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alg&amp;d_s-contest4/btree.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
@@ -87,11 +86,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/alg&amp;d_s-contest4/P4" />
       <recent name="$PROJECT_DIR$/alg&amp;d_s-contest4/P3" />
       <recent name="$PROJECT_DIR$/alg&amp;d_s-contest3/ A3i" />
       <recent name="$PROJECT_DIR$/alg&amp;d_s-contest3/A2i" />
       <recent name="$PROJECT_DIR$/Тренировки по алгоритмам/Тренировки 5" />
-      <recent name="$PROJECT_DIR$/Тренировки по алгоритмам/Множества и словари" />
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.AlgoAndDS_hw1">
@@ -181,6 +180,7 @@
       <workItem from="1733307100311" duration="1338000" />
       <workItem from="1733308502237" duration="6375000" />
       <workItem from="1733349203548" duration="10270000" />
+      <workItem from="1733395949300" duration="18522000" />
     </task>
     <task id="LOCAL-00001" summary="Initial">
       <option name="closed" value="true" />
@@ -502,7 +502,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733314372483</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="new tasks done">
+      <option name="closed" value="true" />
+      <created>1733409688969</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1733409688969</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
