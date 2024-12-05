@@ -1,4 +1,4 @@
-#include "/Users/nazarzakrevskij/CLionProjects/AlgoAndDS_hw1/alg&d_s-contest4/rbtree.h"
+#include "/Users/nazarzakrevskij/CLionProjects/AlgoAndDS_hw1/alg&d_s-contest4/P4/rbtree.h"
 
 Node::Node(int key) : key(key), height(1), size(1), left(nullptr),
 right(nullptr), parent(nullptr), color(Color::BLACK) {}
