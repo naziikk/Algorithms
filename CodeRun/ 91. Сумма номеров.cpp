@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <unordered_map>
 
 int main() {
     int n, k;
@@ -8,13 +9,16 @@ int main() {
     for (int i = 0; i < n; i++) {
         std::cin >> nums[i];
     }
-    int r = 0;
+    std::unordered_map<int, int> mp;
+    mp[0] = 1;
+    long long sum = 0;
     long long ans = 0;
     for (int i = 0; i < n; i++) {
-        while (r < n && nums[r] - nums[i] <= k) {
-            r++;
+        sum += nums[i];
+        if (mp.find(sum - k) != mp.end()) {
+            ans += mp[sum - k];
         }
-        ans += n - r;
+        mp[sum]++;
     }
     std::cout << ans;
     return 0;
