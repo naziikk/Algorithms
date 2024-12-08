@@ -33,7 +33,7 @@ int main() {
     points.resize(dst + 1);
     long long answer = 0;
     std::vector<Pair> points_two_times;
-    for (int i = 0; i < (int) points.size(); i++) {
+    for (int i = 0; i < points.size(); i++) {
         if (points[i].count >= 3) {
             answer++;
         }
@@ -42,19 +42,19 @@ int main() {
         }
     }
     // a b b
-    for (int i = 0; i < (int) points.size(); i++) {
+    for (int i = 0; i < points.size(); i++) {
         long long low = points[i].value;
         long long high = low * k;
         answer += 3LL * (std::upper_bound(points_two_times.begin(), points_two_times.end(), high) - std::upper_bound(points_two_times.begin(), points_two_times.end(), low));
     }
     // a a b
-    for (int i = 0; i < (int) points_two_times.size(); i++) {
+    for (int i = 0; i < points_two_times.size(); i++) {
         long long low = points_two_times[i].value;
         long long high = low * k;
         answer += 3LL * (std::upper_bound(points.begin(), points.end(), high) - std::upper_bound(points.begin(), points.end(), low));
     }
     // a b c
-    for (int i = 0; i < (int) points.size(); i++) {
+    for (int i = 0; i < points.size(); i++) {
         long long low = points[i].value;
         long long high = low * k;
         long long len = (std::upper_bound(points.begin(), points.end(), high) - std::upper_bound(points.begin(), points.end(), low));
