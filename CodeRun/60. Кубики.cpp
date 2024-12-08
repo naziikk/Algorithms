@@ -2,6 +2,7 @@
 #include <vector>
 #include <climits>
 #include <unordered_set>
+#include <algorithm>
 
 int main() {
     int n, m;
