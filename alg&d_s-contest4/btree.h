@@ -6,6 +6,9 @@
 
 struct Node {
     Node(int t);
+
+    Node(int key, Node *parent);
+
     std::vector<int> key;
     std::vector<Node*> children;
     Node* parent;
