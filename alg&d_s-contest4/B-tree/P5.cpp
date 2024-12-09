@@ -1,45 +1,9 @@
 #include <cstdint>
-#include "/Users/nazarzakrevskij/CLionProjects/AlgoAndDS_hw1/alg&d_s-contest4/B-tree/btree.h"
+#include "btree.h"
 #include <functional>
 #include <algorithm>
 #include <iostream>
 #include <queue>
-
-void printTreeByLevels(Node* root) {
-    if (!root) {
-        return;
-    }
-
-    std::queue<Node*> q; // Очередь для BFS
-    q.push(root);
-
-    while (!q.empty()) {
-        size_t levelSize = q.size(); // Количество узлов на текущем уровне
-
-        // Обрабатываем все узлы текущего уровня
-        for (size_t i = 0; i < levelSize; ++i) {
-            Node* current = q.front();
-            q.pop();
-
-            // Выводим ключи текущего узла
-            std::cout << "[ ";
-            for (int key : current->key) {
-                std::cout << key << " ";
-            }
-            std::cout << "] ";
-
-            // Добавляем детей текущего узла в очередь
-            for (Node* child : current->children) {
-                if (child) {
-                    q.push(child);
-                }
-            }
-        }
-        std::cout << "\n"; // Переход на следующий уровень
-    }
-}
-
-
 
 Node::Node(int t) : t(t), isLeaf(true), parent(nullptr) {
     key.reserve(2 * t - 1);
@@ -168,17 +132,4 @@ int64_t BTree::sum() const {
     };
     traverse(root);
     return sum;
-}
-
-
-int main() {
-    BTree tree(2);
-    for (int i = 0; i < 30; i++) {
-        tree.insert(rand() % 20);
-        printTreeByLevels(tree.root);
-        std::cout << tree.size() << '\n';
-        std::cout << "\n";
-    }
-    std::cout << tree.sum() << '\n';
-    std::cout << tree.size();
 }

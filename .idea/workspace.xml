@@ -21,14 +21,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0dd72c2a-463d-4af4-ab8b-21551aee5e46" name="Changes" comment="new tasks done">
-      <change afterPath="$PROJECT_DIR$/alg&amp;d_s-contest4/Splay tree/P6.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alg&amp;d_s-contest4/Splay tree/splay-tree.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alg&amp;d_s-contest4/P3/P3.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/alg&amp;d_s-contest4/AVL-tree/P3.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alg&amp;d_s-contest4/P3/avl tree.h" beforeDir="false" afterPath="$PROJECT_DIR$/alg&amp;d_s-contest4/AVL-tree/avl tree.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alg&amp;d_s-contest4/P4/P4.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/alg&amp;d_s-contest4/RBT/P4.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alg&amp;d_s-contest4/P4/rbtree.h" beforeDir="false" afterPath="$PROJECT_DIR$/alg&amp;d_s-contest4/RBT/rbtree.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alg&amp;d_s-contest4/btree.h" beforeDir="false" afterPath="$PROJECT_DIR$/alg&amp;d_s-contest4/btree.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alg&amp;d_s-contest4/P7b.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/alg&amp;d_s-contest4/P7-bonus.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alg&amp;d_s-contest4/btree.h" beforeDir="false" afterPath="$PROJECT_DIR$/alg&amp;d_s-contest4/B-tree/btree.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/AlgoAndDS_hw1" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/AlgoAndDS_hw1" afterDir="false" />
@@ -93,11 +88,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/alg&amp;d_s-contest4/B-tree" />
+      <recent name="$PROJECT_DIR$/alg&amp;d_s-contest4/P7" />
       <recent name="$PROJECT_DIR$/alg&amp;d_s-contest4/P4" />
       <recent name="$PROJECT_DIR$/alg&amp;d_s-contest4/P3" />
       <recent name="$PROJECT_DIR$/alg&amp;d_s-contest3/ A3i" />
-      <recent name="$PROJECT_DIR$/alg&amp;d_s-contest3/A2i" />
-      <recent name="$PROJECT_DIR$/Тренировки по алгоритмам/Тренировки 5" />
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.AlgoAndDS_hw1">
@@ -197,15 +192,7 @@
       <workItem from="1733481037583" duration="7918000" />
       <workItem from="1733566061934" duration="3569000" />
       <workItem from="1733569638059" duration="4558000" />
-      <workItem from="1733578460034" duration="38657000" />
-    </task>
-    <task id="LOCAL-00006" summary="new tasks done">
-      <option name="closed" value="true" />
-      <created>1731247682742</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1731247682742</updated>
+      <workItem from="1733578460034" duration="45293000" />
     </task>
     <task id="LOCAL-00007" summary="new tasks done">
       <option name="closed" value="true" />
@@ -591,7 +578,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733741926682</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="new tasks done">
+      <option name="closed" value="true" />
+      <created>1733760395212</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1733760395212</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -606,5 +601,16 @@
     <MESSAGE value="Initial" />
     <MESSAGE value="new tasks done" />
     <option name="LAST_COMMIT_MESSAGE" value="new tasks done" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/alg&amp;d_s-contest4/RBT/P4.cpp</url>
+          <line>16</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
