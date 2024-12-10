@@ -28,7 +28,7 @@ void inOrderTraversal(TreeNode* root) {
         return;
     }
     inOrderTraversal(root->left);
-    if ((root->left && !root->right) || (!root->left && root->right)) {
+    if (!root->left && !root->right) {
         std::cout << root->val << '\n';
     }
     inOrderTraversal(root->right);

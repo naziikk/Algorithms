@@ -23,15 +23,21 @@ TreeNode* insert(TreeNode* root, int val, int depth = 1) {
     return root;
 }
 
-void inOrderTraversal(TreeNode* root) {
-    if (!root) {
-        return;
+int getSecondMax(TreeNode* root) {
+    TreeNode* current = root;
+    TreeNode* parent = nullptr;
+    while (current->right) {
+        parent = current;
+        current = current->right;
     }
-    inOrderTraversal(root->left);
-    if ((root->left && !root->right) || (!root->left && root->right)) {
-        std::cout << root->val << '\n';
+    if (current->left) {
+        TreeNode* temp = current->left;
+        while (temp->right) {
+            temp = temp->right;
+        }
+        return temp->val;
     }
-    inOrderTraversal(root->right);
+    return parent->val;
 }
 
 int main() {
@@ -43,6 +49,6 @@ int main() {
         }
         root = insert(root, vertex);
     }
-    inOrderTraversal(root);
+    std::cout << getSecondMax(root);
     return 0;
 }

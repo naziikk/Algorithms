@@ -23,15 +23,18 @@ TreeNode* insert(TreeNode* root, int val, int depth = 1) {
     return root;
 }
 
-void inOrderTraversal(TreeNode* root) {
+TreeNode* find(TreeNode* root, int val) {
     if (!root) {
-        return;
+        return nullptr;
     }
-    inOrderTraversal(root->left);
-    if ((root->left && !root->right) || (!root->left && root->right)) {
-        std::cout << root->val << '\n';
+    if (val == root->val) {
+        return root;
     }
-    inOrderTraversal(root->right);
+    if (val < root->val) {
+        return find(root->left, val);
+    } else {
+        return find(root->right, val);
+    }
 }
 
 int main() {
@@ -41,8 +44,11 @@ int main() {
         if (!vertex) {
             break;
         }
+        if (find(root, vertex)) {
+            continue;
+        }
         root = insert(root, vertex);
+        std::cout << find(root, vertex)->depth << ' ';
     }
-    inOrderTraversal(root);
     return 0;
 }
