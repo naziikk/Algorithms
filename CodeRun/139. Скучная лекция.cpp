@@ -1,8 +1,5 @@
 #include <iostream>
 #include <vector>
-#include <algorithm>
-#include <queue>
-#include <set>
 
 int main() {
     std::string word;
