@@ -10,7 +10,7 @@ int main() {
     for (int i = 0 ; i < n; i++) {
         std::cin >> segments[i];
     }
-    long long sum = std::accumulate(segments.begin(), segments.end(), 0);
+    long long sum = std::accumulate(segments.begin(), segments.end(), 0LL);
     if (sum < k) {
         std::cout << 0;
         return 0;
@@ -20,9 +20,9 @@ int main() {
     long long ans = 0;
     while (l <= r) {
         long long mid = (l + r) / 2;
-        int cur_segments = 0;
-        for (int i = 0; i < segments.size(); i++) {
-            cur_segments += segments[i] / mid;
+        long long cur_segments = 0;
+        for (int i = 0; i < n; i++) {
+            cur_segments += (long long) segments[i] / mid;
         }
         if (cur_segments >= k) {
             ans = mid;
