@@ -8,14 +8,15 @@
 std::unordered_map<std::string, std::vector<std::string>> tree;
 std::map<std::string, int> cnt;
 
-void dfs(const std::string& root, int depth = 0) {
-    cnt[root] = depth;
+int dfs(const std::string& root) {
     if (tree[root].empty()) {
-        return;
+        return 0;
     }
+    int count = 0;
     for (const auto& child : tree.at(root)) {
-       dfs(child, depth + 1);
+       count += 1 + dfs(child);
     }
+    return cnt[root] = count;
 }
 
 int main() {
