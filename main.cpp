@@ -1,47 +1,43 @@
 #include <iostream>
-#include <cmath>
-#include <map>
-#include <unordered_map>
-#include <unordered_set>
 #include <vector>
+#include <algorithm>
+#include <queue>
 
-std::unordered_map<std::string, std::vector<std::string>> tree;
-std::map<std::string, int> cnt;
+std::priority_queue<int> max_heap;
+std::priority_queue<int, std::vector<int>, std::greater<int>> min_heap;
 
-void dfs(const std::string& root, int depth = 0) {
-    cnt[root] = depth;
-    if (tree[root].empty()) {
-        return;
+void Insert(int num) {
+    if (max_heap.empty() || num < max_heap.top()) {
+        max_heap.push(num);
+    } else {
+        min_heap.push(num);
     }
-    for (const auto& child : tree.at(root)) {
-       dfs(child, depth + 1);
+    if (max_heap.size() > min_heap.size() + 1) {
+        min_heap.push(max_heap.top());
+        max_heap.pop();
+    } else if (min_heap.size() > max_heap.size()) {
+        max_heap.push(min_heap.top());
+        min_heap.pop();
     }
+}
+
+int getMedian() {
+    if (max_heap.size() >= min_heap.size()) {
+        return max_heap.top();
+    }
+    return min_heap.top();
 }
 
 int main() {
     int n;
     std::cin >> n;
-    std::unordered_set<std::string> children;
-    for (int i = 0; i < n - 1; i++) {
-        std::string parent, child;
-        std::cin >> child >> parent;
-        tree[parent].push_back(child);
-        children.insert(child);
-        children.insert(parent);
-        cnt[child] = 0;
-        cnt[parent] = 0;
+    long long sum = 0;
+    for (int i = 0; i < n; i++) {
+        int num;
+        std::cin >> num;
+        Insert(num);
+        sum += getMedian();
     }
-    for (const auto& [parent, children_tree] : tree) {
-        for (const auto& child : children_tree) {
-            if (children.find(child) != children.end()) {
-                children.erase(child);
-            }
-        }
-    }
-    std::string root = *children.begin();
-    dfs(root);
-    for (const auto& [name, child] : cnt) {
-        std::cout << name << ' ' << child << '\n';
-    }
+    std::cout << sum;
     return 0;
 }
