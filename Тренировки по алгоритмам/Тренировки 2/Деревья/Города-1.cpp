@@ -59,7 +59,7 @@ int main() {
         graph[u].push_back(v);
         graph[v].push_back(u);
     }
-    auto [left, dist_first] = bfs_max(n, graph, 0);
+    auto [left, _] = bfs_max(n, graph, 0);
     auto [right, diameter] = bfs_max(n, graph, left);
     std::vector<int> left_distances(n, -1);
     std::vector<int> right_distances(n, -1);
