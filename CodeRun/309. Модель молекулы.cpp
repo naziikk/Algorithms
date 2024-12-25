@@ -43,7 +43,7 @@ public:
     int getComponents() const {
         return components;
     }
-    
+
 private:
     std::vector<int> parent;
     std::vector<int> rank;
