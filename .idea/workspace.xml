@@ -21,8 +21,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0dd72c2a-463d-4af4-ab8b-21551aee5e46" name="Changes" comment="new tasks done">
-      <change afterPath="$PROJECT_DIR$/CodeRun/187. Программист на пляже.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodeRun/286. Расшифровка сообщения.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeRun/438. Кристаллы.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeRun/441. Табло.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Тренировки по алгоритмам/Тренировки 3/6. НОП с восстановлением ответа.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Тренировки по алгоритмам/Тренировки 3/9. Списывание.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
@@ -30,7 +32,6 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AlgoAndDS_hw1.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AlgoAndDS_hw1.dir/main.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Тренировки по алгоритмам/Тренировки 4/Хеши для строк/Равенство подстрок.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Тренировки по алгоритмам/Тренировки 4/Хеши для строк/Равенство подстрок.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,15 +200,7 @@
       <workItem from="1734530986283" duration="25802000" />
       <workItem from="1734721510393" duration="109000" />
       <workItem from="1734727616601" duration="17040000" />
-      <workItem from="1734938872300" duration="40993000" />
-    </task>
-    <task id="LOCAL-00036" summary="new tasks done">
-      <option name="closed" value="true" />
-      <created>1732784594650</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1732784594650</updated>
+      <workItem from="1734938872300" duration="55349000" />
     </task>
     <task id="LOCAL-00037" summary="new tasks done">
       <option name="closed" value="true" />
@@ -593,7 +586,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735032070102</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="new tasks done">
+      <option name="closed" value="true" />
+      <created>1735109473645</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1735109473645</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
