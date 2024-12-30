@@ -1,55 +1,76 @@
 #include <iostream>
 #include <vector>
+#include <unordered_set>
+#include <string>
 
-class HeapSort {
-public:
-    void heapify(std::vector<int>& arr, int n, int i) {
-        int left_child = 2 * i + 1;
-        int right_child = 2 * i + 2;
-        int largest = i;
-        if (left_child < n && arr[left_child] > arr[i]) {
-            largest = left_child;
-        }
-        if (right_child < n && arr[right_child] > arr[largest]) {
-            largest = right_child;
-        }
-        if (largest != i) {
-            std::swap(arr[i], arr[largest]);
-            heapify(arr, n, largest);
+std::unordered_set<char> forbidden = {'(', ')', '-', '+', ' '};
+
+std::string strip(const std::string& number) {
+    std::string reformatted_number;
+    for (const auto& symbol : number) {
+        if (forbidden.find(symbol) == forbidden.end()) {
+            reformatted_number += symbol;
         }
     }
+    return reformatted_number;
+}
 
-    void buildMaxHeap(int n, std::vector<int>& arr) {
-        for (int i = n / 2 - 1; i >= 0; i--) {
-            heapify(arr, n, i);
-        }
-    }
+std::vector<std::string> parseTemplateNumber(const std::string& template_number) {
+    std::vector<std::string> parsed_template_number;
+    auto idx = template_number.rfind('-');
+    std::string number = template_number.substr(0, idx);
+    parsed_template_number.push_back(strip(number));
+    parsed_template_number.push_back(template_number.substr(idx + 1));
+    return parsed_template_number;
+}
 
-    void heapSort(std::vector<int>& arr, int n) {
-        buildMaxHeap(n, arr);
-
-        for (int i = n - 1; i > 0; i--) {
-            std::swap(arr[0], arr[i]);
-            heapify(arr, i, 0);
-        }
-    }
-
-    void print(const std::vector<int>& arr) {
-        for (const auto& element : arr) {
-            std::cout << element << ' ';
-        }
-    }
+struct Number {
+    std::string number;
+    std::unordered_set<std::string> prefixes;
+    int idx;
+    bool found;
 };
 
 int main() {
     int n;
     std::cin >> n;
-    std::vector<int> arr(n);
+    std::vector<Number> telephone_numbers(n);
     for (int i = 0; i < n; i++) {
-        std::cin >> arr[i];
+        std::string number;
+        std::getline(std::cin >> std::ws, number);
+        std::string stripped_number = strip(number);
+        telephone_numbers[i].number = stripped_number;
+        telephone_numbers[i].idx = i;
+        std::string prefix;
+        for (const auto& symbol : stripped_number) {
+            prefix += symbol;
+            telephone_numbers[i].prefixes.insert(prefix);
+        }
     }
-    HeapSort heapSort;
-    heapSort.heapSort(arr, n);
-    heapSort.print(arr);
+    int m;
+    std::cin >> m;
+    std::vector<std::string> result_matching(n);
+    for (int i = 0; i < m; i++) {
+        std::string template_number;
+        std::getline(std::cin >> std::ws, template_number);
+        std::vector<std::string> parsed_template_number = parseTemplateNumber(template_number);
+        std::string template_prefix = parsed_template_number[0];
+        std::string template_suffix = parsed_template_number[1];
+        auto idx = template_prefix.find('X');
+        std::string cut_template_prefix = template_prefix;
+        if (idx != std::string::npos) {
+            cut_template_prefix = template_prefix.substr(0, idx);
+        }
+        for (const auto& telephone_number : telephone_numbers) {
+            if (!telephone_numbers[telephone_number.idx].found && telephone_number.prefixes.find(cut_template_prefix) != telephone_number.prefixes.end()) {
+
+                result_matching[telephone_number.idx] = telephone_number.number + " - " + template_suffix + '\n';
+                telephone_numbers[telephone_number.idx].found = true;
+            }
+        }
+    }
+    for (const auto& matching : result_matching) {
+        std::cout << matching;
+    }
     return 0;
 }
