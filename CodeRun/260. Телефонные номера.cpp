@@ -30,8 +30,8 @@ std::string reformatNumber(const std::string& hidden_numbered, const std::string
     auto first_brace_idx = hidden_numbered.find('(');
     auto second_brace_idx = hidden_numbered.find(')');
     std::string reformatted = '+' + matching_number.substr(0, first_brace_idx - 2) + ' ' + '(' +
-            matching_number.substr(first_brace_idx - 2, second_brace_idx - first_brace_idx - 1) + ')' +
-            ' ' + matching_number.substr(second_brace_idx - 3) + " -" + template_suffix + '\n';
+                              matching_number.substr(first_brace_idx - 2, second_brace_idx - first_brace_idx - 1) + ')' +
+                              ' ' + matching_number.substr(second_brace_idx - 3) + " -" + template_suffix + '\n';
     return reformatted;
 }
 
@@ -75,7 +75,7 @@ int main() {
         }
         for (const auto& telephone_number : telephone_numbers) {
             if (!telephone_numbers[telephone_number.idx].found && telephone_number.prefixes.find(cut_template_prefix) != telephone_number.prefixes.end()
-            && telephone_numbers[telephone_number.idx].number.size() == template_prefix.size()) {
+                && telephone_numbers[telephone_number.idx].number.size() == template_prefix.size()) {
                 result_matching[telephone_number.idx] = reformatNumber(hidden_number, telephone_number.number, template_suffix);
                 telephone_numbers[telephone_number.idx].found = true;
             }

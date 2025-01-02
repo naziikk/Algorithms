@@ -21,8 +21,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0dd72c2a-463d-4af4-ab8b-21551aee5e46" name="Changes" comment="new tasks done">
-      <change afterPath="$PROJECT_DIR$/CodeRun/143. Сортировка вагонов lite.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Интересные задачки leetcode/847. Shortest Path Visiting All Nodes.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
@@ -199,15 +197,7 @@
       <workItem from="1734721510393" duration="109000" />
       <workItem from="1734727616601" duration="17040000" />
       <workItem from="1734938872300" duration="63399000" />
-      <workItem from="1735551347919" duration="9918000" />
-    </task>
-    <task id="LOCAL-00040" summary="new tasks done">
-      <option name="closed" value="true" />
-      <created>1733314372483</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1733314372483</updated>
+      <workItem from="1735551347919" duration="11407000" />
     </task>
     <task id="LOCAL-00041" summary="new tasks done">
       <option name="closed" value="true" />
@@ -593,7 +583,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735502866476</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="new tasks done">
+      <option name="closed" value="true" />
+      <created>1735595311014</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1735595311014</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
