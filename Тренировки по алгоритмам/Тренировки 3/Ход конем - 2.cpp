@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 std::string addStrings(const std::string& s, const std::string& t) {
     int i = s.length() - 1;
