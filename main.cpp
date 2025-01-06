@@ -1,74 +1,72 @@
 #include <iostream>
 #include <vector>
-#include <unordered_map>
-#include <unordered_set>
 
-void findComponent(int vertex, int prev, const std::vector<std::vector<int>>& graph,
-                   std::vector<int>& components, int current_component, int skip_node) {
-    components[vertex] = current_component;
-    for (const auto& neighbour : graph[vertex]) {
-        if (neighbour == prev || components[neighbour] != -1 || neighbour == skip_node) {
-            continue;
-        }
-        findComponent(neighbour, vertex, graph, components, current_component, skip_node);
-    }
-}
+class DSU {
+    std::vector<int> parent;
+    std::vector<int> rank;
 
-int computeInfectedNodes(int n, int skip_connection, std::vector<std::vector<int>>& graph, std::vector<int>& initial) {
-    std::vector<int> components(n, -1);
-    int current_component = 1;
-    for (int i = 0; i < n; i++) {
-        if (i == skip_connection) {
-            continue;
-        }
-        if (components[i] == -1) {
-            findComponent(i, -1, graph, components, current_component++, skip_connection);
+public:
+    DSU(int n) {
+        parent.resize(n);
+        rank.resize(n, 1);
+        for (int i = 0; i < n; i++) {
+            parent[i] = i;
         }
     }
-    std::vector<int> component_size(current_component, 0);
-    for (const auto& component : components) {
-        if (component == -1) {
-            continue;
+
+    int Find(int vertex) {
+        if (vertex == parent[vertex]) {
+            return vertex;
         }
-        component_size[component]++;
+        return parent[vertex] = Find(parent[vertex]);
     }
-    std::vector<int> malware_in_component(current_component);
-    int result = 0;
-    for (const auto& node : initial) {
-        if (node == skip_connection) {
-            continue;
+
+    bool Union(int x, int y) {
+        int root_x = Find(x);
+        int root_y = Find(y);
+        if (root_x == root_y) {
+            return false;
         }
-        malware_in_component[components[node]]++;
-        if (malware_in_component[components[node]] == 1) {
-            result += component_size[components[node]];
+        if (rank[root_x] < rank[root_y]) {
+            std::swap(root_x, root_y);
         }
+        parent[root_y] = root_x;
+        if (rank[root_x] == rank[root_y]) {
+            rank[root_x]++;
+        }
+        return true;
     }
-    return result;
-}
+};
 
 class Solution {
 public:
-    int minMalwareSpread(std::vector<std::vector<int>>& grid, std::vector<int>& initial) {
-        int n = grid.size();
-        std::vector<std::vector<int>> graph(n);
+    std::vector<int> findRedundantDirectedConnection(std::vector<std::vector<int>>& edges) {
+        int n = edges.size();
+        DSU dsu(n + 1);
+        std::vector<int> parent(n + 1, -1);
+        int first_candidate = -1;
+        int second_candidate = -1;
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                if (grid[i][j] && i != j) {
-                    graph[i].push_back(j);
-                    graph[j].push_back(i);
+            int from = edges[i][0];
+            int to = edges[i][1];
+            if (parent[to] != -1) {
+                first_candidate = parent[to];
+                second_candidate = i;
+                break;
+            }
+            parent[to] = i;
+        }
+        for (int i = 0; i < n; i++) {
+            if (i == second_candidate) {
+                continue;
+            }
+            if (!dsu.Union(edges[i][0], edges[i][1])) {
+                if (first_candidate == -1) {
+                    return edges[i];
                 }
+                return edges[first_candidate];
             }
         }
-        std::sort(initial.begin(), initial.end());
-        int mini = 0;
-        int result_node = initial[0];
-        for (const auto& node : initial) {
-            int result = computeInfectedNodes(n, node, graph, initial);
-            if (result > mini || (result == mini && node < result_node)) {
-                mini = result;
-                result_node = node;
-            }
-        }
-        return result_node;
+        return edges[second_candidate];
     }
 };
