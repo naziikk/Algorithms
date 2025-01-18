@@ -21,16 +21,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0dd72c2a-463d-4af4-ab8b-21551aee5e46" name="Changes" comment="new tasks done">
-      <change afterPath="$PROJECT_DIR$/Интересные задачки leetcode/2858. Minimum Edge Reversals So Every Node Is Reachable.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Интересные задачки leetcode/3042. Count Prefix and Suffix Pairs I.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-55996516efff23f6a900.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2024-12-07T11-12-39-0736.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/AlgoAndDS_hw1" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/AlgoAndDS_hw1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AlgoAndDS_hw1.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AlgoAndDS_hw1.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Задачи с собесов/Поддеревья из одинаковых букв.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Задачи с собесов/Поддеревья из одинаковых букв.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +99,7 @@
       <recent name="$PROJECT_DIR$/alg&amp;d_s-contest3/ A3i" />
     </key>
   </component>
-  <component name="RunManager" selected="CMake Application.AlgoAndDS_hw1">
+  <component name="RunManager" selected="C/C++ File.task1.cpp">
     <configuration name="AlgoAndDS_hw1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AlgoAndDS_hw1" TARGET_NAME="AlgoAndDS_hw1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AlgoAndDS_hw1" RUN_TARGET_NAME="AlgoAndDS_hw1">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -208,14 +211,16 @@
       <workItem from="1736345178347" duration="7542000" />
       <workItem from="1736403229031" duration="2167000" />
       <workItem from="1736507171518" duration="3954000" />
-    </task>
-    <task id="LOCAL-00044" summary="new tasks done">
-      <option name="closed" value="true" />
-      <created>1733608243673</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1733608243673</updated>
+      <workItem from="1736511137123" duration="12552000" />
+      <workItem from="1736693391036" duration="1624000" />
+      <workItem from="1736708511935" duration="6428000" />
+      <workItem from="1736805765357" duration="2356000" />
+      <workItem from="1736853496775" duration="4576000" />
+      <workItem from="1736925087009" duration="1490000" />
+      <workItem from="1737008938957" duration="11808000" />
+      <workItem from="1737125563393" duration="27000" />
+      <workItem from="1737125605084" duration="6000" />
+      <workItem from="1737183071858" duration="1276000" />
     </task>
     <task id="LOCAL-00045" summary="new tasks done">
       <option name="closed" value="true" />
@@ -601,7 +606,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736164636800</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="new tasks done">
+      <option name="closed" value="true" />
+      <created>1736630472964</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1736630472968</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

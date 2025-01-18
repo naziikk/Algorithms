@@ -27,10 +27,10 @@ public:
         }
         dfs(root->left);
         dfs(root->right);
-        if (root->left != nullptr) {
+        if (root->left) {
             root->mask |= root->left->mask;
         }
-        if (root->right != nullptr) {
+        if (root->right) {
             root->mask |= root->right->mask;
         }
         if (nodes.find(root->mask) == nodes.end()) {
