@@ -2,7 +2,7 @@
 #include <vector>
 
 class Solution {
-    std::vector<std::vector<int>> graph;
+    std::vector<std::vector<int> > graph;
     int dfs(const std::vector<int>& nums, int vertex, int prev, int& components, int target) {
         int sum = nums[vertex];
         for (const auto& neighbour : graph[vertex]) {

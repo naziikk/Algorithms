@@ -12,11 +12,14 @@ public:
                 continue;
             }
             for (int j = i + 1; j < n; j++) {
+                if (j != i + 1 && nums[j] == nums[j - 1]) {
+                    continue;
+                }
                 int k = j + 1;
                 int r = n - 1;
                 while (k < r) {
-                    long long sum = nums[i] + nums[j] + nums[k] + nums[r];
-                    if (sum == 0) {
+                    long long sum = (long long) nums[i] + nums[j] + nums[k] + nums[r];
+                    if (sum == target) {
                         ans.push_back({nums[i], nums[j], nums[k], nums[r]});
                         k++;
                         r--;
@@ -26,7 +29,7 @@ public:
                         while (k < r && nums[r] == nums[r + 1]) {
                             r--;
                         }
-                    } else if (sum < 0) {
+                    } else if (sum < target) {
                         k++;
                     } else {
                         r--;

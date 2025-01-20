@@ -21,19 +21,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0dd72c2a-463d-4af4-ab8b-21551aee5e46" name="Changes" comment="new tasks done">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-55996516efff23f6a900.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2024-12-07T11-12-39-0736.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/AlgoAndDS_hw1" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/AlgoAndDS_hw1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AlgoAndDS_hw1.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AlgoAndDS_hw1.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Задачи с собесов/Поддеревья из одинаковых букв.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Задачи с собесов/Поддеревья из одинаковых букв.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Интересные задачки leetcode/2440. Create Components With Same Value.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Интересные задачки leetcode/2440. Create Components With Same Value.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,14 +210,7 @@
       <workItem from="1737125563393" duration="27000" />
       <workItem from="1737125605084" duration="6000" />
       <workItem from="1737183071858" duration="1276000" />
-    </task>
-    <task id="LOCAL-00045" summary="new tasks done">
-      <option name="closed" value="true" />
-      <created>1733609435406</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1733609435406</updated>
+      <workItem from="1737208029787" duration="2868000" />
     </task>
     <task id="LOCAL-00046" summary="new tasks done">
       <option name="closed" value="true" />
@@ -614,7 +596,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736630472968</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="new tasks done">
+      <option name="closed" value="true" />
+      <created>1737209491720</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1737209491720</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
