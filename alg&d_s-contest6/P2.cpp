@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <unordered_set>
 
 class DSU {
     std::vector<int> parent;
@@ -49,55 +50,57 @@ struct Edge {
     }
 };
 
-int buildMinimumSpanningTree(int n, std::vector<Edge>& edge_list, int skip_index = -1, int add = -1) {
+std::pair<std::unordered_set<int>, int> buildMST(int n, std::vector<Edge>& edge_list, int skip_index = -1, int add = -1) {
     DSU dsu(n);
     int total_weight = 0;
     int edges_used = 0;
 
     if (add != -1) {
         const auto& edge = edge_list[add];
-        if (dsu.Find(edge.from) != dsu.Find(edge.to)) {
-            dsu.Unite(edge.from, edge.to);
-            total_weight += edge.weight;
-            edges_used++;
-        }
+        dsu.Unite(edge.from, edge.to);
+        total_weight += edge.weight;
+        edges_used++;
     }
-
+    std::unordered_set<int> st;
     for (int i = 0; i < edge_list.size(); i++) {
         if (i == skip_index) continue;
         const auto& edge = edge_list[i];
         if (dsu.Find(edge.from) != dsu.Find(edge.to)) {
             dsu.Unite(edge.from, edge.to);
             total_weight += edge.weight;
+            st.insert(edge.index);
             edges_used++;
         }
     }
-    return edges_used == n - 1 ? total_weight : INT_MAX;
+    return {st, edges_used == n - 1 ? total_weight : INT_MAX};
 }
 
-class Solution {
-public:
-    std::vector<std::vector<int>> findCriticalAndPseudoCriticalEdges(int n, std::vector<std::vector<int>>& edges) {
-        std::vector<Edge> edge_list;
-        edge_list.reserve(edges.size());
-        for (int i = 0; i < edges.size(); i++) {
-            edge_list.push_back({edges[i][0], edges[i][1], edges[i][2], i});
+std::pair<int, int> findTwoMinimumMSTs(int n, std::vector<Edge> &edges) {
+    std::sort(edges.begin(), edges.end());
+    auto [st, minMST] = buildMST(n, edges);
+    int secondMST = std::numeric_limits<int>::max();
+
+    for (int i = 0; i < edges.size(); i++) {
+        auto [temp_st, weight] = buildMST(n, edges, edges[i].index);
+        if (weight >= minMST && temp_st != st) {
+            secondMST = std::min(secondMST, weight);
         }
-        std::sort(edge_list.begin(), edge_list.end());
-        int mst_weight = buildMinimumSpanningTree(n, edge_list);
-        std::vector<int> critical_edges;
-        std::vector<int> pseudo_critical_edges;
-        for (const auto& edge : edge_list) {
-            int weight_without_edge = buildMinimumSpanningTree(n, edge_list, edge.index);
-            if (weight_without_edge > mst_weight) {
-                critical_edges.push_back(edge.index);
-            } else {
-                int weight_with_edge = buildMinimumSpanningTree(n, edge_list, -1, edge.index);
-                if (weight_with_edge == mst_weight) {
-                    pseudo_critical_edges.push_back(edge.index);
-                }
-            }
-        }
-        return {critical_edges, pseudo_critical_edges};
     }
-};
+
+    return {minMST, secondMST};
+}
+
+int main() {
+    int n, m;
+    std::cin >> n >> m;
+    std::vector<Edge> edges;
+    for (int i = 0; i < m; i++) {
+        int u, v, w;
+        std::cin >> u >> v >> w;
+        edges.push_back({u - 1, v - 1, w, i});
+    }
+
+    auto [first_min, second_min] = findTwoMinimumMSTs(n, edges);
+    std::cout << first_min << ' ' << second_min;
+    return 0;
+}

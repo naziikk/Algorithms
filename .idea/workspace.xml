@@ -21,8 +21,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0dd72c2a-463d-4af4-ab8b-21551aee5e46" name="Changes" comment="new tasks done">
+      <change afterPath="$PROJECT_DIR$/alg&amp;d_s-contest5/A2. Кубическое пробирование.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alg&amp;d_s-contest5/Bloom`s Filter/bloom_filter.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alg&amp;d_s-contest5/Bloom`s Filter/bloom_filter.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alg&amp;d_s-contest5/EulerianGraphCheck/DirectedGraph.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alg&amp;d_s-contest5/EulerianGraphCheck/UndirectedGraph.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alg&amp;d_s-contest5/P3.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alg&amp;d_s-contest5/Задание Р1. Хеш-таблица.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alg&amp;d_s-contest6/P1.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alg&amp;d_s-contest6/P3.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Задачи с собесов/LineReflection.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Задачи с собесов/Найти минимальный подмассив, такой, что если его отсортировать, исходный массив будет отсортирован.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Задачи с собесов/Общий префикс.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Задачи с собесов/Удалить смайлик из строки.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Интересные задачки leetcode/1765. Map of Highest Peak.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-0b3d4587f2715307992f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2025-01-17T14-53-25-0521.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-AlgoAndDS_hw1-Debug-8a5d74bd965a86086c5f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/AlgoAndDS_hw1" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/AlgoAndDS_hw1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AlgoAndDS_hw1.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AlgoAndDS_hw1.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Интересные задачки leetcode/2440. Create Components With Same Value.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Интересные задачки leetcode/2440. Create Components With Same Value.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Задачи с собесов/Задача на запросы.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Задачи с собесов/Задача на запросы.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,32 +88,33 @@
     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/nazarzakrevskij/CLionProjects/AlgoAndDS_hw1/alg&amp;d_s-contest4/P3&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/nazarzakrevskij/CLionProjects/AlgoAndDS_hw1/alg&amp;d_s-contest5&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/alg&amp;d_s-contest5" />
       <recent name="$PROJECT_DIR$/alg&amp;d_s-contest4/P3" />
       <recent name="$PROJECT_DIR$/alg&amp;d_s-contest3/ A3i" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/alg&amp;d_s-contest5/Bloom`s Filter" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/alg&amp;d_s-contest4/B-tree" />
       <recent name="$PROJECT_DIR$/alg&amp;d_s-contest4/P7" />
       <recent name="$PROJECT_DIR$/alg&amp;d_s-contest4/P4" />
-      <recent name="$PROJECT_DIR$/alg&amp;d_s-contest4/P3" />
-      <recent name="$PROJECT_DIR$/alg&amp;d_s-contest3/ A3i" />
     </key>
   </component>
-  <component name="RunManager" selected="C/C++ File.task1.cpp">
+  <component name="RunManager" selected="CMake Application.AlgoAndDS_hw1">
     <configuration name="AlgoAndDS_hw1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AlgoAndDS_hw1" TARGET_NAME="AlgoAndDS_hw1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AlgoAndDS_hw1" RUN_TARGET_NAME="AlgoAndDS_hw1">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -211,14 +237,27 @@
       <workItem from="1737125605084" duration="6000" />
       <workItem from="1737183071858" duration="1276000" />
       <workItem from="1737208029787" duration="2868000" />
-    </task>
-    <task id="LOCAL-00046" summary="new tasks done">
-      <option name="closed" value="true" />
-      <created>1733640351273</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1733640351273</updated>
+      <workItem from="1737361564575" duration="4518000" />
+      <workItem from="1737442749508" duration="13117000" />
+      <workItem from="1737845245959" duration="928000" />
+      <workItem from="1737967937090" duration="636000" />
+      <workItem from="1738000107658" duration="3000" />
+      <workItem from="1738269528401" duration="5062000" />
+      <workItem from="1738274601897" duration="8419000" />
+      <workItem from="1738410234517" duration="33000" />
+      <workItem from="1738489177397" duration="3678000" />
+      <workItem from="1738495791119" duration="13229000" />
+      <workItem from="1738576401118" duration="339000" />
+      <workItem from="1738576951353" duration="1439000" />
+      <workItem from="1738672233066" duration="14290000" />
+      <workItem from="1738753010922" duration="602000" />
+      <workItem from="1738790817709" duration="617000" />
+      <workItem from="1738847263758" duration="12000" />
+      <workItem from="1738847311665" duration="2370000" />
+      <workItem from="1739040094870" duration="59000" />
+      <workItem from="1739046465957" duration="5467000" />
+      <workItem from="1739194377191" duration="361000" />
+      <workItem from="1739194761882" duration="10696000" />
     </task>
     <task id="LOCAL-00047" summary="new tasks done">
       <option name="closed" value="true" />
@@ -604,7 +643,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737209491720</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="new tasks done">
+      <option name="closed" value="true" />
+      <created>1737365615216</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1737365615216</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
