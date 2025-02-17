@@ -21,33 +21,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0dd72c2a-463d-4af4-ab8b-21551aee5e46" name="Changes" comment="new tasks done">
-      <change afterPath="$PROJECT_DIR$/alg&amp;d_s-contest5/A2. Кубическое пробирование.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alg&amp;d_s-contest5/Bloom`s Filter/bloom_filter.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alg&amp;d_s-contest5/Bloom`s Filter/bloom_filter.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alg&amp;d_s-contest5/EulerianGraphCheck/DirectedGraph.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alg&amp;d_s-contest5/EulerianGraphCheck/UndirectedGraph.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alg&amp;d_s-contest5/P3.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alg&amp;d_s-contest5/Задание Р1. Хеш-таблица.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alg&amp;d_s-contest6/P1.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alg&amp;d_s-contest6/P3.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Задачи с собесов/LineReflection.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Задачи с собесов/Найти минимальный подмассив, такой, что если его отсортировать, исходный массив будет отсортирован.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Задачи с собесов/Общий префикс.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Задачи с собесов/Удалить смайлик из строки.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Интересные задачки leetcode/1765. Map of Highest Peak.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alg&amp;d_s-contest6/P4.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alg&amp;d_s-contest6/P5.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alg&amp;d_s-contest6/P7b.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-0b3d4587f2715307992f.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2025-01-17T14-53-25-0521.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-AlgoAndDS_hw1-Debug-8a5d74bd965a86086c5f.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/AlgoAndDS_hw1" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/AlgoAndDS_hw1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AlgoAndDS_hw1.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AlgoAndDS_hw1.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Задачи с собесов/Задача на запросы.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Задачи с собесов/Задача на запросы.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -258,14 +241,9 @@
       <workItem from="1739046465957" duration="5467000" />
       <workItem from="1739194377191" duration="361000" />
       <workItem from="1739194761882" duration="10696000" />
-    </task>
-    <task id="LOCAL-00047" summary="new tasks done">
-      <option name="closed" value="true" />
-      <created>1733644847282</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1733644847282</updated>
+      <workItem from="1739261460105" duration="3099000" />
+      <workItem from="1739626400446" duration="147000" />
+      <workItem from="1739792316465" duration="6902000" />
     </task>
     <task id="LOCAL-00048" summary="new tasks done">
       <option name="closed" value="true" />
@@ -651,7 +629,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737365615216</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="new tasks done">
+      <option name="closed" value="true" />
+      <created>1739261505637</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1739261505637</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

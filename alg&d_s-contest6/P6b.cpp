@@ -9,7 +9,7 @@ std::vector<std::vector<int>> paths;
 
 void update(int value, int current, std::queue<int> &q, int cost) {
     if (distances[value] > distances[current] + cost
-    || (distances[value] == distances[current] + cost && paths[value].size() > paths[current].size() + 1)) {
+        || (distances[value] == distances[current] + cost && paths[value].size() > paths[current].size() + 1)) {
         distances[value] = distances[current] + cost;
         paths[value] = paths[current];
         paths[value].push_back(value);
